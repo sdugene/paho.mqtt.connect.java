@@ -9,9 +9,9 @@ public class Mqtt {
     private Connection connection = new Connection();
     private Messages messages = new Messages();
 
-    public Mqtt connect() throws MqttException
+    public Mqtt connect(String broker, String clientId) throws MqttException
     {
-        mqttClient = connection.connect();
+        mqttClient = connection.connect(broker, clientId);
         return this;
     }
 
